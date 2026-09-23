@@ -1,489 +1,346 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shreyas Gopal</title>
+<meta name="description" content="Shreyas Gopal — PhD student at Nanyang Technological University, Singapore. Speech, language and generative AI: multilingual speech LLMs, noise-robust ASR, speech–text alignment.">
+<link rel="icon" href="data:,">
+<style>
+  /* Deliberately plain. One column, system serif, classic link colours.
+     No frameworks, no fonts to download, no JavaScript. */
+  :root{
+    --fg:#1a1a1a; --bg:#fdfdfb; --muted:#595959; --rule:#d8d8d2;
+    --link:#0645ad; --visited:#6b3fa0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --fg:#e8e6e1; --bg:#16171a; --muted:#a0a0a0; --rule:#33353a;
+           --link:#7cb1ff; --visited:#c0a3e8; }
+  }
+  html{ -webkit-text-size-adjust:100% }
+  body{
+    max-width:41rem; margin:0 auto; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--fg);
+    font-family:Georgia,"Iowan Old Style","Times New Roman",Times,serif;
+    font-size:19px; line-height:1.65;
+  }
+  a{ color:var(--link) }
+  a:visited{ color:var(--visited) }
 
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Resume</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  h1{ font-size:2.1rem; line-height:1.2; margin:0 0 .2rem }
+  h2{ font-size:1.25rem; margin:2.6rem 0 .6rem;
+      padding-top:.9rem; border-top:1px solid var(--rule) }
+  h3{ font-size:1rem; margin:1.4rem 0 .2rem }
+  p{ margin:0 0 1rem }
+  ul{ margin:0 0 1rem; padding-left:1.4rem }
+  li{ margin:0 0 .45rem }
+  .muted{ color:var(--muted) }
+  .small{ font-size:.87em }
 
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  /* header */
+  .photo{
+    float:right; width:132px; height:auto; margin:.3rem 0 1rem 1.5rem;
+    border:1px solid var(--rule);
+  }
+  .tagline{ font-size:1.05rem; margin:0 0 .8rem }
+  .links{ font-size:.95rem; margin:0 0 .5rem }
+  .links a{ white-space:nowrap }
 
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">
+  /* publications */
+  ol.pubs{ list-style:none; padding:0; margin:0 }
+  ol.pubs li{ margin:0 0 1.15rem }
+  .pubtitle{ font-weight:bold }
+  .authors{ font-size:.92em }
+  .venue{ font-size:.92em; font-style:italic; color:var(--muted) }
+  .me{ text-decoration:underline }
+  .award{ font-size:.85em; font-weight:bold }
 
-   <!-- script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+  /* roles */
+  .role{ margin:0 0 1.1rem }
+  .role .where{ font-weight:bold }
+  .role .when{ color:var(--muted); font-size:.9em }
 
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+  details{ margin:.6rem 0 1rem }
+  summary{ cursor:pointer; font-weight:bold; font-size:1rem; padding:.2rem 0 }
+  summary:hover{ color:var(--link) }
+  details[open] summary{ margin-bottom:.8rem }
 
+  footer{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--rule);
+          font-size:.85rem; color:var(--muted) }
+
+  @media (max-width:520px){
+    body{ font-size:18px; padding:2rem 1.1rem 3.5rem }
+    .photo{ width:96px; margin-left:1rem }
+  }
+</style>
 </head>
+<body>
+
+<img class="photo" src="profile.jpg" alt="Shreyas Gopal">
+
+<h1>Shreyas Gopal</h1>
+<p class="tagline">PhD student, Nanyang Technological University, Singapore.</p>
+
+<p class="links">
+  <a href="mailto:shreyas011@e.ntu.edu.sg">shreyas011@e.ntu.edu.sg</a> &middot;
+  <a href="https://scholar.google.com/citations?user=HEl4L_gAAAAJ&amp;hl=en">Google Scholar</a> &middot;
+  <a href="https://github.com/Oofone">GitHub</a> &middot;
+  <a href="https://www.linkedin.com/in/the-shreyas-gopal/">LinkedIn</a>
+</p>
+
+<h2>About</h2>
+
+<p>
+  I am a PhD student in Computing and Data Science at Nanyang Technological University,
+  working in the Speech and Language Lab under Prof. Chng Eng Siong. My research direction is
+  <em>noise-robust adaptation of joint speech&ndash;large language models for under-resourced
+  languages</em>.
+</p>
+
+<p>
+  Most of what I work on sits at the join between a speech encoder and a text LLM: how to align
+  the two cheaply, how to keep that alignment from falling apart under noise, and how to make it
+  hold for languages with very little annotated data. Recent work has been on multilingual
+  instruction-following speech LLMs trained from ASR data alone, on disentangling discrete speech
+  representations for robustness, and on code-switching ASR.
+</p>
+
+<p>
+  Before the PhD I spent four and a half years at Amazon as a software engineer, mostly on
+  distributed back-end services. I moved back into research in 2024.
+</p>
+
+<h2>Research interests</h2>
+
+<ul>
+  <li>Speech large language models &mdash; speech&ndash;text alignment, distillation, instruction following</li>
+  <li>Multilingual and low-resource speech understanding</li>
+  <li>Noise-robust ASR and discrete speech representations</li>
+  <li>Code-switching speech recognition</li>
+</ul>
+
+<h2>Publications</h2>
+
+<p class="small muted">
+  See <a href="https://scholar.google.com/citations?user=HEl4L_gAAAAJ&amp;hl=en">Google
+  Scholar</a> for live citation counts.
+</p>
+
+<h3>2026</h3>
+<ol class="pubs">
+  <li>
+    <span class="pubtitle">Language-Aware Distillation for Multilingual Instruction-Following Speech LLMs with ASR-Only Supervision</span><br>
+    <span class="authors"><span class="me">S. Gopal</span>, D. Wu, A. Anshul, Y. Yue Heng, Y. Peng, H. Li, H. Liu, E. S. Chng</span><br>
+    <span class="venue">Interspeech 2026, Sydney.</span>
+    <span class="small"><a href="https://arxiv.org/abs/2603.07025">arXiv</a> &middot;
+    <a href="https://oofone.github.io/language-aware-distillation-sllm/">project page</a></span>
+  </li>
+  <li>
+    <span class="pubtitle">Improving Code-Switching ASR with Code-Mixing Guided Synthetic Speech</span><br>
+    <span class="authors">Y. H. Yeo, H. Li, Y. Peng, <span class="me">S. Gopal</span>, H. Liu, L. P. Garcia-Perera, H. B. Sailor, et al.</span><br>
+    <span class="venue">Preprint.</span>
+    <span class="small"><a href="https://arxiv.org/abs/2606.19381">arXiv</a></span>
+  </li>
+</ol>
+
+<h3>2025</h3>
+<ol class="pubs">
+  <li>
+    <span class="pubtitle">Explainable Disentanglement on Discrete Speech Representations for Noise-Robust ASR</span><br>
+    <span class="authors"><span class="me">S. Gopal</span>, A. Anshul, H. Li, Y. H. Yeo, H. Liu, E. S. Chng</span><br>
+    <span class="venue">APSIPA ASC 2025.</span>
+    <span class="award">Best Student Paper Award.</span>
+    <span class="small"><a href="https://doi.org/10.1109/APSIPAASC65261.2025.11249036">DOI</a></span>
+  </li>
+  <li>
+    <span class="pubtitle">Intra-modal and Cross-modal Synchronization for Audio-visual Deepfake Detection and Temporal Localization</span><br>
+    <span class="authors">A. Anshul, <span class="me">S. Gopal</span>, D. Rajan, E. S. Chng</span><br>
+    <span class="venue">ICCV 2025, pp. 13826&ndash;13836.</span>
+  </li>
+  <li>
+    <span class="pubtitle">Speechless: Speech Instruction Training Without Speech for Low Resource Languages</span><br>
+    <span class="authors">A. Dao, D. B. Vu, H. H. Ha, T. L. D. Anh, <span class="me">S. Gopal</span>, Y. H. Yeo, W. K. H. Low, E. S. Chng, Y. J. Qi</span><br>
+    <span class="venue">Interspeech 2025.</span>
+    <span class="small"><a href="https://doi.org/10.21437/Interspeech.2025-1292">DOI</a></span>
+  </li>
+  <li>
+    <span class="pubtitle">Improving Code-Switching Speech Recognition with TTS Data Augmentation</span><br>
+    <span class="authors">Y. H. Yeo, Y. Hu, <span class="me">S. Gopal</span>, Y. Peng, H. Liu, E. S. Chng</span><br>
+    <span class="venue">APSIPA ASC 2025.</span>
+  </li>
+  <li>
+    <span class="pubtitle">GenTSE: Enhancing Target Speaker Extraction via a Coarse-to-Fine Generative Language Model</span><br>
+    <span class="authors">H. Li, X. Zhuang, A. Adnan, Y. Ni, W. Rao, <span class="me">S. Gopal</span>, E. S. Chng, B. S. Han, et al.</span><br>
+    <span class="venue">Preprint.</span>
+    <span class="small"><a href="https://arxiv.org/abs/2512.20978">arXiv</a></span>
+  </li>
+  <li>
+    <span class="pubtitle">Next-Frame Feature Prediction for Multimodal Deepfake Detection and Temporal Localization</span><br>
+    <span class="authors">A. Anshul, <span class="me">S. Gopal</span>, D. Rajan, E. S. Chng</span><br>
+    <span class="venue">Preprint.</span>
+    <span class="small"><a href="https://arxiv.org/abs/2511.10212">arXiv</a></span>
+  </li>
+</ol>
+
+<h3>2019 and earlier</h3>
+<ol class="pubs">
+  <li>
+    <span class="pubtitle">Bootstrapping Creativity in Generative Models for Novel Classical Music Generation</span><br>
+    <span class="authors"><span class="me">S. Gopal</span>, V. Sridharan, V. V. Prasad</span><br>
+    <span class="venue">B.E. thesis, SSN College of Engineering, 2019.</span>
+  </li>
+  <li>
+    <span class="pubtitle">Multi-Level Smart Parking System using IoT</span><br>
+    <span class="authors">P. Mirunalini, B. Bharathi, N. Ananthamurugan, S. Suresh, <span class="me">S. Gopal</span></span><br>
+    <span class="venue">ICCCSP 2018.</span>
+    <span class="small"><a href="https://doi.org/10.1109/ICCCSP.2018.8452835">DOI</a></span>
+  </li>
+</ol>
+
+<h2>Teaching</h2>
+
+<p>
+  Teaching assistant at NTU for Signals, Systems and Transforms; Linear Algebra; Computer Networks;
+  and Data Structures and Algorithms.
+</p>
+
+<h2>Experience</h2>
+
+<div class="role">
+  <span class="where">Nanyang Technological University</span> &mdash; Research &amp; Teaching Assistant<br>
+  <span class="when">Jan 2024 &ndash; present &middot; Singapore</span>
+  <ul>
+    <li>Speech and Language Lab, under Prof. Chng Eng Siong. Literature review, data preparation,
+        training and inference pipelines, model evaluation and baselines across several funded projects.</li>
+  </ul>
+</div>
+
+<div class="role">
+  <span class="where">Amazon</span> &mdash; Software Development Engineer<br>
+  <span class="when">Feb 2019 &ndash; Dec 2023 &middot; Hyderabad, India</span>
+  <ul>
+    <li><b>SDE II</b> (Jun 2021 &ndash; Dec 2023). Expanded existing micro-services and features into new
+        geographies. High- and low-level design of a new service supporting small-item drop-off by
+        third-party shippers.</li>
+    <li><b>SDE I</b> (Sep 2019 &ndash; Jun 2021). Built an end-to-end asynchronous customer notification
+        system across multiple channels; upgraded Java and Python micro-services for new business
+        requirements; operational excellence and production service maintenance.</li>
+    <li><b>Intern</b> (Feb &ndash; Sep 2019). System for support associates to re-process challenged
+        shipper claims; resolved 10,000+ stuck claims.</li>
+  </ul>
+</div>
+
+<div class="role">
+  <span class="where">Admatic Solutions</span> &mdash; Computer Vision &amp; ML Intern<br>
+  <span class="when">May 2018 &ndash; Jan 2019 &middot; Chennai, India</span>
+  <ul>
+    <li>Face and surface detection; intelligent 3D-mapping of objects for Unity tutorials; an
+        end-to-end Django e-commerce site.</li>
+  </ul>
+</div>
+
+
+<h2>Education</h2>
+
+<div class="role">
+  <span class="where">Nanyang Technological University</span> &mdash; PhD, Computing and Data Science<br>
+  <span class="when">Jan 2024 &ndash; present (expected 2028) &middot; Singapore</span>
+</div>
+
+<div class="role">
+  <span class="where">SSN College of Engineering, Anna University</span> &mdash; B.E., Computer Science and Engineering<br>
+  <span class="when">Aug 2015 &ndash; May 2019 &middot; Chennai, India</span>
+</div>
+
+<h2>Awards</h2>
+
+<ul>
+  <li>Best Student Paper Award, APSIPA ASC 2025.</li>
+  <li>Best Technological Implementation, Codespace Hackathon, VIT Vellore, 2017.</li>
+  <li>Winner, Microsoft AI Hackathon (iTrix, CEG), 2017.</li>
+  <li>Third place, Hasura Online Hackathon, 2018.</li>
+</ul>
+
+<h2>Undergraduate projects</h2>
+
+<details>
+  <summary>Projects from 2016&ndash;2018 (click to expand)</summary>
+
+  <p class="small muted">
+    Coursework, hackathon and internship projects from my undergraduate degree at SSN College of
+    Engineering. Kept for the record.
+  </p>
+
+  <h3>Multi-Level Smart Parking System <span class="muted small">&middot; 2017&ndash;2018</span></h3>
+  <p>
+    Internally funded project at SSN. Automatically assigns a parking space on entry based on in-lot
+    traffic, entry point, nearest free space and distance to the entrance. Published at ICCCSP 2018.
+  </p>
+
+  <h3>Elementary <span class="muted small">&middot; 2018</span></h3>
+  <p>
+    Guided by Dr. R. S. Milton. Analysed student data to find patterns in academic growth, categorise
+    environmental features as helpful or detrimental, and predict later-stage performance, including
+    the odds of a well-paying job after graduating.
+  </p>
+
+  <h3>Trippy <span class="muted small">&middot; Feb 2018</span></h3>
+  <p>
+    Third place, Hasura Online Hackathon. Android app for travellers that generates a smart itinerary
+    from your interests and current location, with an AR mode for exploring tourist sites.
+    Python, Django, MongoDB, Android.
+  </p>
+
+  <h3>SimplX <span class="muted small">&middot; Mar 2017, also shown as &ldquo;C for Code&rdquo;</span></h3>
+  <p>
+    Best Technological Implementation, Codespace Hackathon, VIT Vellore. A Django service converting
+    natural language into compilable code in several languages, plus a feature converting hand-drawn
+    flowcharts into code. OpenCV, spaCy, Python, Django, Android.
+  </p>
+
+  <h3>Emotionalytics <span class="muted small">&middot; Mar 2017</span></h3>
+  <p>
+    Winner, Microsoft AI Hackathon at iTrix, CEG. Predicts a film&rsquo;s gross revenue by analysing
+    audience reactions during a trailer screening, using the Microsoft Emotion and Face APIs.
+  </p>
+
+  <h3>Q Minus <span class="muted small">&middot; Mar 2017</span></h3>
+  <p>
+    Built at the In50hrs Startup Challenge, PayPal Chennai. Android app that shortens supermarket
+    queues by letting shoppers scan or search products and pay through a gateway before leaving.
+  </p>
+
+  <h3>Noobuntu <span class="muted small">&middot; Mar 2017</span></h3>
+  <p>
+    A Facebook Messenger bot answering programming and open-source questions, built by scraping
+    SyntaxDB, Stack Overflow and similar sources.
+  </p>
+
+  <h3>Sudoku Solver <span class="muted small">&middot; Dec 2016 &ndash; Jan 2017</span></h3>
+  <p>
+    Photograph a Sudoku puzzle and have it solved automatically. Built with Vishal Gupta.
+  </p>
+
+  <h3>Banking Transaction Manager <span class="muted small">&middot; Jun 2016</span></h3>
+  <p>
+    Database management coursework. Java front-end, Oracle MySQL back-end over JDBC, with fully
+    encrypted transactions.
+  </p>
+
+  <h3>Web scrapers <span class="muted small">&middot; 2016&ndash;2017</span></h3>
+  <p>
+    A torrent finder returning the most relevant and recent results for a query, and a subtitle
+    finder that also synchronises subtitles to a video automatically.
+  </p>
+
+</details>
+
+<footer>
+  <p>
+    Last updated September 2026.
+    Source at <a href="https://github.com/Oofone/Oofone.github.io">github.com/Oofone/Oofone.github.io</a>.
+  </p>
+</footer>
 
-<body id="top">
-
-	<!-- header
-   ================================================== -->
-   <header>
-   	<div class="row">
-
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Home</span></a>
-
-	   		<div class="logo">
-		         <a href="index.html">Shreyas</a>
-		      </div>
-
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
-						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>
-					</ul>
-				</nav>
-   		</div> <!-- /top-bar -->
-
-   	</div> <!-- /row -->
-   </header> <!-- /header -->
-
-	<!-- intro section
-   ================================================== -->
-   <section id="intro">
-
-   	<div class="intro-overlay"></div>
-
-   	<div class="intro-content">
-   		<div class="row">
-
-   			<div class="col-twelve">
-
-	   			<h5>system.out.print("Hello World")</h5>
-	   			<h1>I'm Shreyas Gopal.</h1>
-
-	   			<p class="intro-position">
-	   				<span>Data Scienctist</span>
-            <span>Python Enthusiast</span>
-	   			</p>
-
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-
-	   		</div>
-
-   		</div>
-   	</div> <!-- /intro-content -->
-
-   	<ul class="intro-social">
-         <li><a href="https://www.facebook.com/shreyasg97"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="https://github.com/oofone"><i class="fa fa-github"></i></a></li>
-         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-      </ul> <!-- /intro-social -->
-
-   </section> <!-- /intro -->
-
-
-   <!-- about section
-   ================================================== -->
-   <section id="about">
-
-   	<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Me.</h5>
-   			<h1>Let me introduce myself.</h1>
-
-   			<div class="intro-info">
-
-   				<img src="images/profile-pic.jpg" alt="Profile Picture">
-
-   				<p class="lead">After 8 years of harrowing Indian Education I must say, I've turned out alright. I'm a 20 year old Student, completing a Bachelor's Degree in Engineering for Computer Science and Engineering in SSN College of Engineering in Chennai, India. I was born in India and at the age of 8 I moved to San Antonio, Texas for a period of 8 years. I returned here just in time to finish my 9th year of shcooling and I've been here ever since. Sometime in my first year of College I fell in love with the sheer elegance and power of the Python proggramming language, and I'm also interested in Data Science, Machine Learning and Web Development.</p>
-   			</div>
-
-   		</div>
-   	</div> <!-- /section-intro -->
-
-   	<div class="row about-content">
-
-   		<div class="col-six tab-full">
-
-        <h3>Basic Info</h3>
-
-   			<ul class="info-list">
-   				<li>
-   					<strong>Fullname:</strong>
-   					<span>Shreyas Gopal</span>
-   				</li>
-   				<li>
-   					<strong>Birth Date:</strong>
-   					<span>May 08, 1997</span>
-   				</li>
-   				<li>
-   					<strong>Job:</strong>
-   					<span>Student</span>
-   				</li>
-   				<li>
-   					<strong>Website:</strong>
-					<span><a href=#>https://oofone.github.io/</a></span>
-   				</li>
-   				<li>
-   					<strong>Email:</strong>
-   					<span>shreyas.gopal.ind@gmail.com</span>
-   				</li>
-
-   			</ul> <!-- /info-list -->
-
-        <h3>Education</h3>
-        <ul class="info-list">
-   				<li>
-   					<strong>Secondary Education:</strong>
-   					<span>ICSE</span>
-            <span>Navadisha MS</span>
-            <span>2011-2013</span>
-   				</li>
-   				<li>
-   					<strong>Higher Secondary Education:</strong>
-            <span>CBSE</span>
-            <span>Chettinad Vidyashram</span>
-            <span>2013-2015</span>
-   				</li>
-   				<li>
-   					<strong>BE Computer Science & Engineering:</strong>
-   					<span>SSN College of Engineering</span>
-   				</li>
-
-   			</ul>
-
-   		</div>
-
-   		<div class="col-six tab-full">
-
-   			<h3>Skills</h3>
-   			<p>I'm well versed in most common Python packages including but not limited to Theano, BeautifulSoup, Pandas, Numpy, Scipy, sklearn etc.</p>
-        <p>I'm an avid learner of Machine Learning. I can work on both Python and MATLAB/Octave. I hope to continue onto the field of Deep Learning as well soon.</p>
-				<ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent80"><span>80%</span></div>
-				   	<strong>C, C++, Java(OOP)</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent50"><span>60%</span></div>
-				   	<strong>HTML, CSS, JS</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent95"><span>85%</span></div>
-				   	<strong>Python, Django, Selenium</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent65"><span>65%</span></div>
-				   	<strong>Machine Learning</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent70"><span>60%</span></div>
-				   	<strong>C#</strong>
-				   </li>
-           <li>
-            <div class="progress percent75"><span>45%</span></div>
-            <strong>Photoshop(Design)</strong>
-           </li>
-           <li>
-            <div class="progress percent80"><span>55%</span></div>
-            <strong>Linux/Shell</strong>
-           </li>
-
-				</ul> <!-- /skill-bars -->
-
-   		</div>
-
-   	</div>
-   </section>
-	
-   <!-- resume Section
-   ================================================== -->
-	<section id="resume" class="grey-section">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Resume</h5>
-   			<h1>Experience/Projects</h1>
-
-   			<p class="lead">I've engaged myself in a few projects and Products developed at Hackathons.</p>
-
-   		</div>
-   	</div> <!-- /section-intro-->
-
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Projects</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-				
-				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>C for Code</h3>
-	   					<p>16th - 17th April, 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Won Best Technological Implementation at Codespace, VIT CSI Hackathon, Vellore</h4>
-	   					<p>An Android Application for code Literacy. Converts spoken logic/algorithms to fully functional scalable C Code. Additionally can translate a Flowchart to code from an image file. Useful to teach Students and "Code Illiterate" people how to work with programming languages.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-				
-				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Q Minus (Queue Minus)</h3>
-	   					<p>25th - 26th March, 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Developed at PayPal offices Chennai, In50hrs Startup Challenge</h4>
-	   					<p>An Android Application that aids in reducing queues in shopping markets and grocery stores by allowing you to quickly purchase all your products on the Application through simple search mechanism, or by scanning the product's barcode. This will allow the payer to pay directly through a payment gateway and be on his way, minimizing the length of a physical queue.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Emotionalytics</h3>
-	   					<p>March 18th 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Won at Microsoft AI Hackathon, iTrix CEG 2017</h4>
-	   					<p>Implemented with Machine Learning using the Emotion and Face API by Microsoft, our module can predict the gross revenue a movie will make, by analysing the reactions of the audience while a trailer or preview of the movie is being screened.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Noobuntu</h3>
-	   					<p>March, 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4> Developed at Hatchathon</h4>
-	   					<p>A messenger bot that operates on the Facebook Messenger platform. It is capable of answering questions based on Programming, coding and general open source software including topics like Unix, Linux etc. It was developed by scraping websites such as SyntaxDB, Stackoverflow etc.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-          <div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Sudoku-Solver</h3>
-	   					<p>Dec 2016 - Jan 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Project</h4>
-	   					<p>An application that allows you to take a picture of a Sudoku puzzle and automatically solves it for you. Useful for checking solutions to Sudoku's. Developed in collaboration with <a href"https://github.com/py-ranoid">Vishal Gupta</a>.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Smart Parking System</h3>
-	   					<p>August 2017 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>SSN College, Internally Funded Project</h4>
-	   					<p>A system that automatically selects a parking spot upon entry of a customer based on factors such as in-lot traffic, entry point, closest free space, distance to entrance, etc.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-          </div> <!-- /timeline-block -->
-
-          <div class="timeline-block">
-
-            <div class="timeline-ico">
-              <i class="fa fa-graduation-cap"></i>
-            </div>
-
-            <div class="timeline-header">
-              <h3>Banking Transaction Manager</h3>
-              <p>June 2016</p>
-            </div>
-
-            <div class="timeline-content">
-              <h4>Sem III, Database Management Project</h4>
-              <p>Using NETBEANs, with a Oracle MySQL backend and a JAVA front-end, linked with generic JDBC. Capable of fully encrypted transactions.</p>
-            </div>
-          </div> <!-- /timeline-block -->
-
-   			</div> <!-- /timeline-wrap -->
-
-   		</div> <!-- /col-twelve -->
-		<!-- /resume-timeline -->
-
-    <div class="row resume-timeline">
-      <h3>Webcrawlers and Webscrapers</h3>
-      <ul class="info-list">
-        <li>
-          <strong><a href="https://github.com/Oofone/torrent-finder">Torrent Finder:</a></strong>
-          <span>Webscraper</span>
-          <span>Scrapes the web to find the most relevant/recent torrents as per the given search parameters.</span>
-          <span>Finished</span>
-        </li>
-        <li>
-          <strong>Subtitle Finder and Synchronizer:</strong>
-          <span>Webscraper</span>
-          <span>Finds the best possible subtitles for most videos/television shows/movies and automatically synchronizes them for you.</span>
-          <span>Ongoing</span>
-        </li>
-      </ul>
-	    
-	    <!-- <a class="button button-primary large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a> -->
-		      </div>
-    <!-- /cta-content -->
-   </section> <!-- /cta -->
-
-   <!-- contact
-   ================================================== -->
-	<section id="contact">
-   	<div class="row contact-info">
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-pin"></i>
-   			</div>
-
-   			<h5>Where to find me</h5>
-
-   			<p>
-            17/14, Sengeni Amman Koil St.<br>
-            Maduvankarai, Chennai, TN<br>
-            600032, India
-            </p>
-
-   		</div>
-
-   		<div class="col-four tab-full collapse">
-
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
-
-   			<h5>Email Me At</h5>
-
-   			<p>shreyas.gopal.ind@gmail.com<br>
-			   	shreyasg97@outlook.com.com
-			   </p>
-
-   		</div>
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
-
-   			<h5>Call Me At</h5>
-
-   			<p>Phone: (+91) (044) 2244 3565<br>
-			   	Mobile: (+91) 95512 61714<br>
-			   </p>
-
-   		</div>
-
-   	</div> <!-- /contact-info -->
-
-	<!-- /contact -->
-
-  <!-- footer
-  ================================================== -->
-
-  <footer>
-     <div class="row">
-
-       <div class="col-six tab-full pull-right social">
-
-         <ul class="footer-social">
-           <li><a href="https://facebook.com/shreyasg97"><i class="fa fa-facebook"></i></a></li>
-           <li><a href="https://github.com/Oofone"><i class="fa fa-github"></i></a></li>
-           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-           <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        </ul>
-
-       </div>
-
-       <div class="col-six tab-full">
-         <div class="copyright">
-             <span>© Copyright Kards 2016.</span>
-             <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-            </div>
-         </div>
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-         </div>
-
-       </div> <!-- /row -->
-  </footer>
-		
- <div id="preloader">
-     <div id="loader"></div>
-  </div> 
-
-
-  <!-- Java Script
-  ================================================ -->
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 </body>
-	   
-	   </html>	   
+</html>
